@@ -1,0 +1,34 @@
+package pack1;
+import java.util.Scanner;
+public class StudencoDemo {
+
+	public static void main(String[] args) {
+		Student obj = new Student();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter n:");
+		int n=sc.nextInt();
+		Student a[]=new Student[10];  //array of student (only array will be created)
+		int i;
+		for(i=0;i<a.length;i++)
+		{
+			a[i]=new Student();///here memory is allocated and object is created and repeats creating objects  
+			                                            //up to n elements in array {creates n objects}
+			if(a[i].setName(sc.next())&&a[i].setGender(sc.next())&&a[i].setId(sc.nextLong())&&a[i].setBranch(sc.next()))
+			{
+				System.out.println(a[i]);
+			}
+			else
+			{
+				
+				System.out.println("Enter valid input");
+				
+				
+			}
+			
+		}
+		
+		System.out.println(obj);
+		
+	}
+
+}
